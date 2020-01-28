@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Pizza Value Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <!-- Nav Bar -->
+    <nav>
+      <img src="./pizza.svg" alt="" class="pizza" />
+      <div class="title">
+        <h1 class="naslov">
+          Pizza Value Calculator
+        </h1>
+      </div>
+    </nav>
+    <div class="page-body">
+      <!-- Calculator title -->
+      <div class="main-title">
+        <h1>
+          Calculate Food Value
+        </h1>
+        <h5>
+          Input Food Quantity and Price
+        </h5>
+      </div>
+      <!-- Actual Calculator -->
+      <div class="calculator">
+        <div class="calculator1">
+          <label for="pizza-price">Price: </label>
+          <input
+            type="number"
+            maxlength="4"
+            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            min="0"
+            max="9999"
+            class="number-input"
+            id="price-input"
+            name="pizza-price"
+            placeholder="0"
+          />
+          <select name="currencyList" class="currency" id="currencyList">
+            <option value="eur" selected>€</option>
+            <option value="usd">$</option>
+            <option value="gbp">£</option>
+            <option value="rsd">RSD</option>
+            <option value="rur">RUR</option>
+          </select>
+          <label for="size">Size: </label>
+          <input
+            type="number"
+            maxlength="2"
+            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            class="number-input"
+            name="pizza-price"
+            id="size-input"
+          />
+          <select name="size" class="units" id="unitlist">
+            <option value="cm" selected>cm</option>
+            <option value="in">in</option>
+          </select>
+          <div class="divider"></div>
+
+          <label for="output">Value: </label>
+          <div name="output" class="value" id="out1"></div>
+          <div name="output" class="value" id="out2"></div>
+          <div class="plus-minus" id="plus">
+            <div class="line1"></div>
+            <div class="line2"></div>
+          </div>
+        </div>
+        <!---->
+        <!--  2nd Calculator  -->
+        <!---->
+        <div class="calculator2">
+            <label for="pizza-price">Price: </label>
+            <input
+              type="number"
+              maxlength="4"
+              oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+              min="0"
+              max="9999"
+              class="number-input"
+              id="price-input"
+              name="pizza-price"
+              placeholder="0"
+            />
+            <select name="currencyList" class="currency" id="currencyList">
+              <option value="eur" selected>€</option>
+              <option value="usd">$</option>
+              <option value="gbp">£</option>
+              <option value="rsd">RSD</option>
+              <option value="rur">RUR</option>
+            </select>
+            <label for="size">Size: </label>
+            <input
+              type="number"
+              maxlength="2"
+              oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+              class="number-input"
+              name="pizza-price"
+              id="size-input"
+            />
+            <select name="size" class="units" id="unitList">
+              <option value="cm" selected>cm</option>
+              <option value="in">in</option>
+            </select>
+            <div class="divider"></div>
+  
+            <label for="output">Value: </label>
+            <div name="output" class="value" id="out1"></div>
+            <div name="output" class="value" id="out2"></div>
+            <div class="plus-minus" id="minus">
+              <div class="line1"></div>
+              
+            </div>
+        
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
